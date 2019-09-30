@@ -1,0 +1,89 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+*{
+	outline:none;
+	margin:0;
+	padding:0;
+	list-style: none;
+	text-decoration: none;
+
+}
+
+.middle{
+	top:50%;
+	left:50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.menu{
+	width:300px;
+	border-radius: 8px;
+	overflow: hidden;
+
+}
+
+.item{
+	border-top:1px solid #2980b9;
+	overflow: hidden;
+}
+
+.btn{
+	background-color: #3498db;
+	padding:16px 20px;
+	color:white;
+	display: block;
+	position:relative;
+
+}
+
+.btn:before{
+	content:"";
+	width:20px;
+	height: 20px;
+	left:20px;
+	bottom:-10px;
+	position:absolute;
+	transform: rotate(-45deg);
+	background-color: #3498db;
+}
+
+.btn i{
+	margin-right: 10px;
+}
+
+.smenu{
+	overflow:hidden;
+	background-color:#000;
+	max-height: 0;
+	transition: max-height 0.5s;
+}
+
+.smenu a{
+	display:block;
+	padding:16px 26px;
+	color:white;
+	font-size: 14px;
+	margin: 10px 0px;
+	position:relative;
+}
+
+.smenu a:before{
+	content:"";
+	height: 100%;
+	width:6px;
+	top:0px;
+	left:0px;
+	background:#3498db;
+	position:absolute;
+	transition: 0.3s;
+	opacity:0;
+}
+
+.smenu a:hover:before{
+	opacity:1;
+}
+
+.item:target .smenu{
+	max-height:10em;
+}

@@ -1,0 +1,43 @@
+body{
+	margin:0;
+	padding:0;
+	background-color: #34495e;
+	height: 100vh;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "montserrat", sans-serif;
+
+}
+
+.loading{
+	height:100px;
+	width:100px;
+	background-color: red;
+	box-sizing: border-box;
+	border-radius:50%;
+	border:20px;
+	position:relative;
+	top:0px;
+	animation: a1 4s linear infinite;
+}
+
+.loading span{
+	color:#fff;
+	position:absolute;
+	height:200px;
+	width:200px;
+	top:-50px;
+	left:-50px;
+	text-align: center;
+	line-height: 200px;
+	
+}
+
+@keyframes a1{
+	0% {background-color: red; top:-10px;}
+	25% {background-color: green; top:10px;}
+	50% {background-color: yellow; top:-10px;}
+	75% {background-color: blue; top:10px;}
+}
+
